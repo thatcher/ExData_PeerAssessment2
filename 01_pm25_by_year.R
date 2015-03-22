@@ -1,7 +1,8 @@
 # Homework assignment for Coursera exdata-011
 # Week 3
-# 01_pm25_by_year.R
-# See etl.R for the data extract/transform/load routines.  We consolidated
+
+# See https://github.com/thatcher/ExData_PeerAssessment2/blob/master/etl.R 
+# for the data extract/transform/load routines.  We consolidated
 # them into one file so each of the plots  can leverage the same process
 # without duplicating the code.  This saves a lot of time during
 # development since we arent reloading the data to develop the graph.
@@ -13,8 +14,6 @@ pm25_by_year = etl.load('pm25_by_year')
 # Finally construct the plot
 with(pm25_by_year, {
     
-    # open the png for writing but make sure we close it even in the
-    # event of an error.
     png('plot1.png')
     
     tryCatch({
